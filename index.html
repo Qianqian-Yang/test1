@@ -1,0 +1,283 @@
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px">Sat-Mesh</span>
+        <br>
+        <span style="font-size:24px">&nbsp;Learning Neural Implicit Surfaces for Multi-view Satellite Reconstruction</span>
+        <br><br>
+		<table align=center width=600px>
+			<table align=center width=600px>
+				<tr>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://github.com/jieeeeeeeeeee">Yingjie Qu&iacute;</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="http://hts.sgg.whu.edu.cn/teachers/45.html">Fei Deng</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<table align=center width=480px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://openaccess.thecvf.com/content/CVPR2023W/EarthVision/papers/Mari_Multi-Date_Earth_Observation_NeRF_The_Detail_Is_in_the_Shadows_CVPRW_2023_paper.pdf'>[Paper]</a></span>
+						</center>
+					</td>
+                    <td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://github.com/centreborelli/eonerf/releases/tag/EarthVision2023'>[Data]</a></span><br>
+						</center>
+					</td>
+                    <td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='./bibtex.txt'>[Bibtex]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</table>
+	</center>
+    <br>
+    <table align=center width=850px>
+		<center>
+			<tr>
+				<td align=center>
+                    Project developed at the <a href='https://centreborelli.ens-paris-saclay.fr/fr'>ENS Paris-Saclay, Centre Borelli</a> and accepted at the <a href='https://www.grss-ieee.org/events/earthvision-2023/'>CVPR EarthVision Workshop 2023</a>.<br>
+				</td>
+			</tr>
+		</center>
+	</table>
+
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Abstract</h1></center>
+		<tr>
+			<td align=justify>
+                Automatic reconstruction of surfaces from satellite imagery is a hot topic in computer vision and photogrammetry. State-of-the-art reconstruction methods typically produce 2.5D elevation data. In contrast, we propose a one-stage method directly generating a 3D mesh model from multi-view satellite imagery. We introduce a novel Sat-Mesh approach for satellite implicit surface reconstruction: We represent the scene as a continuous signed distance function (SDF) and leverage a volume rendering framework to learn the SDF values. To address the challenges posed by lighting variations and inconsistent appearances in satellite imagery, we incorporate a latent vector in the network architecture to encode image appearances. Furthermore, we introduce a multi-view stereo constraint to enhance surface quality. This constraint minimizes the similarity between image patches to optimize the position and orientation of the SDF surface. Experimental results demonstrate that our method achieves superior visual quality and quantitative accuracy in generating mesh models. Besides, our approach can learn seasonal variations in satellite imagery, resulting in texture mesh models with different and consistent seasonal appearances.
+			</td>
+		</tr>
+	</table>
+	<br>
+
+    
+    <br>
+	<center>
+		<table align=center width=1200px>
+			<tr>
+				<td width=160px>
+					<center> 
+					        <span style="font-size:20px">Example input views (subset)</span><br><br>
+						<img class="round" style="width:375px" src="./IARPA_003/input_views.png"/>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+					        <span style="font-size:20px">EO-NeRF renderings</span><br><br>
+						<video autoplay loop muted inline style="width:400px">
+  						<source src="./IARPA_003/rgb-opt-10.mp4" type="video/mp4">
+						</video>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+					        <span style="font-size:20px">EO-NeRF altitude</span><br><br>
+						<video autoplay loop muted inline style="width:400px">
+  						<source src="./IARPA_003/depth-opt-10.mp4" type="video/mp4">
+						</video>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</center>
+    
+    	<center>
+		<table align=center width=1200px>
+			<tr>
+				<td width=160px>
+					<center> 
+						<img class="round" style="width:375px" src="./JAX_214/input_views.png"/>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+						<video autoplay loop muted inline style="width:400px">
+  						<source src="./JAX_214/rgb-opt-10.mp4" type="video/mp4">
+						</video>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+						<video autoplay loop muted inline style="width:400px">
+  						<source src="./JAX_214/depth-opt-10.mp4" type="video/mp4">
+						</video>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</center>
+    
+    	<center>
+		<table align=center width=1200px>
+			<tr>
+				<td width=160px>
+					<center> 
+						<img class="round" style="width:375px" src="./IARPA_001/input_views.png"/>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+						<video autoplay loop muted inline style="width:400px">
+  						<source src="./IARPA_001/rgb-opt-10.mp4" type="video/mp4">
+						</video>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+						<video autoplay loop muted inline style="width:400px">
+  						<source src="./IARPA_001/depth-opt-10.mp4" type="video/mp4">
+						</video>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</center>
+    <br>
+    
+       <hr>
+	<center><h1>Geometrically Consistent Shadows</h1></center>
+	   </center>
+		<table align=center width=1200px>
+			<tr>
+				<td width=160px>
+					<center> 
+						<video autoplay loop muted inline style="width:400px">
+  						<source src="./IARPA_003/shadows-opt-10.mp4" type="video/mp4">
+						</video>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+						<video autoplay loop muted inline style="width:400px">
+  						<source src="./JAX_214/shadows-opt-10.mp4" type="video/mp4">
+						</video>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+					<center>
+						<video autoplay loop muted inline style="width:400px">
+  						<source src="./IARPA_001/shadows-opt-10.mp4" type="video/mp4">
+						</video>
+					</center>
+					</center>
+				</td>
+			</tr>
+		</table>
+		<table align=center width=850px>
+		<tr>
+			<td align=justify>
+                EO-NeRF computes geometrically consistent shadows by projecting auxiliary rays from the surface boundary towards the position of the sun. This strategy provides hints to refine the geometry, which in turn refines the rendered shadows.
+			</td>
+		</tr>
+		</table>
+	</center>
+	<br>
+	
+	
+	<hr>
+
+	<center><h1>Method Outputs in Detail</h1></center>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=400px>
+				<center>
+					<img width="1000px" src="./outputs.png"/>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<table align=center width=850px>
+		<center>
+			<tr>
+				<td align=justify>
+                    Left to right: (a) Input image, (b) albedo, (c) geometric shadows, (d) transient phenomena, (e) uncertainty coefficient, (f) altitude (g) albedo with geometric shadows irradiance, (h) albedo with geometric shadows irradiance after affine transformation, (i) albedo with geometric shadows and transient phenomena irradiance after affine transformation.
+				</td>
+			</tr>
+		</center>
+	</table>
+	<table align=center width=800px>
+		<tr>
+        </tr>
+	</table>
+	<br>
+	<hr>
+
+	<center><h1>Geometry Comparison</h1></center>
+	<link rel="stylesheet" href="src/dics.original.css">
+	<script src="src/dics.original.js"></script>
+	<center>
+	    <div class="b-dics" style="width: 1000px">
+		<img src="mesh_gallery/lidar.png" alt="LiDAR">
+		<img src="mesh_gallery/eonerf.png" alt="EO-NeRF">
+		<img src="mesh_gallery/satnerf.png" alt="Sat-NeRF">
+		<img src="mesh_gallery/mgm.png" alt="MVS (MGM)">
+		<img src="mesh_gallery/psm.png" alt="MVS (PSM)">
+	    </div>
+	<table align=center width=850px>
+		<center>
+		<tr>
+			<td align=center>
+                Check the <a href='viewer/compare.html'>auxiliary viewer</a> to easily compare only two methods at a time.
+			</td>
+		</tr>
+		</center>
+	</table>
+	</center>
+
+	<hr>
+	<table align=center width=450px>
+		<center><h1>Paper</h1></center>
+		<tr>
+			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./paper.png"/></a></td>
+			<td><span style="font-size:14pt">R. Mar&iacute;, G. Facciolo, <br>T. Ehret.<br>
+				<b>Multi-Date Earth Observation NeRF: <br>The Detail Is in the Shadows.</b><br>
+				In CVPR Workshops, 2023.<br>
+				(<a href="https://openaccess.thecvf.com/content/CVPR2023W/EarthVision/papers/Mari_Multi-Date_Earth_Observation_NeRF_The_Detail_Is_in_the_Shadows_CVPRW_2023_paper.pdf">camera ready</a>)<br> 
+				<span style="font-size:4pt"><a href=""><br></a>
+				</span>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<table align=center width=600px>
+		<tr>
+			<td><span style="font-size:14pt"><center>
+				<a href="./bibtex.txt">[Bibtex]</a>
+			</center></td>
+		</tr>
+	</table>
+
+	<hr>
+	<br>
+
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+					The code for comparing multiple images with sliders can be found <a href="https://www.cssscript.com/compare-multiple-images-dics/">here</a>, while the auxiliary viewer was created from this <a href="https://github.com/loetcodes/multiple-image-comparison-slider/">demo</a>.
+				</left>
+			</td>
+		</tr>
+	</table>
+
+<br>
+</body>
